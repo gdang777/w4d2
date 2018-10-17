@@ -27,7 +27,6 @@ function printResult(results){
     })
 }
 
-
 knex.select('*').from("famous_people").where('first_name', 'like', `${querySearch}%`)
 .asCallback((err, rows) => {
     if(err) {
